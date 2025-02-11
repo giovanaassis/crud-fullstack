@@ -1,0 +1,49 @@
+.user-form {
+    background-color: lightcyan;
+    border-radius: 20px;
+    box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.39);
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: all 3s ease;
+
+    opacity: 0;
+    animation: fadeIn .5s forwards;
+}
+
+/* Definição da animação */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: translate(-50%, -60%); /* Começa um pouco acima */
+    }
+    100% {
+        opacity: 1; /* Torna-se totalmente visível */
+        transform: translate(-50%, -50%); /* Chega na posição final */
+    }
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-block: 2rem;
+}
+
+.inputs input {
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(135 135 135);
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.close-btn {
+    margin-right: 10px;
+}
