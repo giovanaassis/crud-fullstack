@@ -1,12 +1,14 @@
 .modal-delete {
+    background-color: white;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 2;
     border-radius: 5px;
     box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.39);
-    padding: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
 
     opacity: 0;
     animation: fadeIn .2s forwards;
@@ -21,4 +23,8 @@
         opacity: 1; /* Torna-se totalmente visível */
         transform: translate(-50%, -50%); /* Chega na posição final */
     }
+}
+
+.modal-delete .yes-btn{
+    margin-right: 1rem;
 }

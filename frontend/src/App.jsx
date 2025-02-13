@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import TableList from './components/TableList'
 import UserForm from './components/UserForm'
-import axios from 'axios';
+import apiFetch from './axios/config'
 import DeleteConfirmation from './components/deleteConfirmation';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
   // retorna todos os usuários
   const getUsers = async () => {
-    const response = await axios.get('http://localhost:3000/api/users');
+    const response = await apiFetch.get('/users');
     const data = await response.data;
 
     setUsers(data);
@@ -38,7 +38,7 @@ function App() {
 
     console.log(values);
 
-    await axios.post('http://localhost:3000/api/users', values);
+    await apiFetch.post('/users', values);
     getUsers();
   }
 
@@ -50,7 +50,7 @@ function App() {
 
   // atualiza um usuário
   const editUser = async (id, user) => {
-    await axios.patch(`http://localhost:3000/api/users/${id}`, user);
+    await apiFetch.patch(`/users/${id}`, user);
     getUsers();
   }
 
@@ -66,9 +66,9 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='container'>
       <h1>CRUD de usuários</h1>
-      <button onClick={openModal}>Criar novo usuário</button>
+      <button onClick={openModal} className='addUser-btn'>+ Criar novo usuário</button>
 
       <TableList users={users} handleEdit={handleEdit} handleDelete={handleDelete} />
 

@@ -21,8 +21,8 @@ const TableList = ({ users, handleEdit, handleDelete }) => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td className='actions'>
-                                <button onClick={() => handleEdit(user)}>Editar</button>
-                                <button onClick={() => handleDelete(user)}>Remover</button>
+                                <button onClick={() => handleEdit(user)} className='edit-btn'>Editar</button>
+                                <button onClick={() => handleDelete(user)} className='delete-btn'>Remover</button>
                             </td>
                         </tr>
                     ) ) }

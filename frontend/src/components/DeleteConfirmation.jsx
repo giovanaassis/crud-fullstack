@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import axios from "axios";
+import apiFetch from '../axios/config';
 import './DeleteConfirmation.css'
 
 const DeleteConfirmation = ({ userId, getUsers, setDeleteMode, setSelectedUser } ) => {
 
     const deleteUser = async (userId) => {
-        await axios.delete(`http://localhost:3000/api/users/${userId}`);
+        await apiFetch.delete(`/users/${userId}`);
         getUsers();
         setDeleteMode(false);
         setSelectedUser('');
@@ -14,7 +14,7 @@ const DeleteConfirmation = ({ userId, getUsers, setDeleteMode, setSelectedUser }
     return (
         <div className="modal-delete">
             <p>Tem certeza que deseja remover esse usuário?</p>
-            <button onClick={() => deleteUser(userId)}>Sim</button>
+            <button onClick={() => deleteUser(userId)} className='yes-btn'>Sim</button>
             <button onClick={() => { setDeleteMode(false); setSelectedUser(''); }}>Não</button>
         </div>
     )
