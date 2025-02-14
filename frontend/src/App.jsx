@@ -3,7 +3,7 @@ import './App.css'
 import TableList from './components/TableList'
 import UserForm from './components/UserForm'
 import apiFetch from './axios/config'
-import DeleteConfirmation from './components/deleteConfirmation';
+import DeleteConfirmation from './components/DeleteConfirmation';
 
 function App() {
 
