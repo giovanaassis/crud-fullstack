@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiFetch = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://crud-fullstack-backend-git-main-giovanaassis-projects.vercel.app/api',
     headers: {
         "Content-Type": "application/json"
     }
