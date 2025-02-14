@@ -67,7 +67,7 @@ function App() {
 
   return (
     <div className='container'>
-      <h1>CRUD de usuários</h1>
+      <h1>CRUD de Usuários</h1>
       <button onClick={openModal} className='addUser-btn'>+ Criar novo usuário</button>
 
       <TableList users={users} handleEdit={handleEdit} handleDelete={handleDelete} />

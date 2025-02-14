@@ -22,7 +22,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #d3d1d1;
 }
 
 .actions button{
@@ -43,4 +43,19 @@ tr:nth-child(even) {
 
 .delete-btn {
     background-color: rgb(248, 31, 31);
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 18px;
+    }
+
+    .actions button {
+        padding: 8px;
+        margin: 10px;
+    }
 }
